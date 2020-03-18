@@ -1,0 +1,19 @@
+@import "~common/stylesheet/index";
+
+.markdown {
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow-y: auto;
+
+  .content {
+    padding: 24px;
+    font-size: $font-size-large;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

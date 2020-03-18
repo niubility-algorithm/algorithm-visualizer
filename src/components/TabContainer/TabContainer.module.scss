@@ -1,0 +1,70 @@
+@import "~common/stylesheet/index";
+
+.tab_container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+
+  .tab_bar {
+    display: flex;
+    align-items: stretch;
+    height: $line-height;
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-shrink: 0;
+
+    .title {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 0 12px;
+      margin: 0;
+      border-bottom: 1px solid $theme-light;
+
+      .input_title {
+        input {
+          &:hover,
+          &:focus {
+            margin: -4px;
+            padding: 4px;
+            background-color: $theme-normal;
+          }
+        }
+      }
+
+      &.selected {
+        border-left: 1px solid $theme-light;
+        border-right: 1px solid $theme-light;
+        margin: 0 -1px;
+        border-bottom: none;
+        background-color: $theme-dark;
+      }
+
+      &.fake {
+        pointer-events: none;
+
+        &:first-child {
+          flex-shrink: 0;
+          width: $line-height / 2;
+        }
+
+        &:last-child {
+          flex: 1;
+        }
+      }
+    }
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: $theme-dark;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,68 @@
+@import "~common/stylesheet/index";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-bottom: 1px solid $theme-light;
+
+    .section {
+      height: $line-height;
+      display: flex;
+      align-items: stretch;
+
+      .title_bar {
+        font-size: $font-size-large;
+        font-weight: bold;
+        min-width: 0;
+
+        .nav_arrow {
+          margin: 0 4px;
+        }
+
+        .nav_caret {
+          margin-left: 4px;
+        }
+
+        .input_title {
+          padding: 4px 8px;
+          background-color: $theme-light;
+        }
+      }
+
+      .btn_dropdown {
+        position: relative;
+        font-weight: bold;
+
+        &:active {
+          box-shadow: none;
+        }
+
+        .dropdown {
+          z-index: 98;
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: none;
+          flex-direction: column;
+          align-items: stretch;
+          box-shadow: 0 0 8px $color-shadow;
+          background-color: $theme-light;
+          margin-top: $line-height;
+        }
+
+        &:hover {
+          .dropdown {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}

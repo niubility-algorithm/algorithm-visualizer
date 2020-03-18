@@ -1,0 +1,63 @@
+@import "~common/stylesheet/index";
+
+.code_editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  .ace_editor {
+    flex: 1;
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    .current_line_marker {
+      background-color: rgba($color-highlight, 0.4);
+      border: 1px solid $color-highlight;
+      position: absolute;
+      width: 100% !important;
+
+      animation: line_highlight .1s;
+    }
+
+    @keyframes line_highlight {
+      from {
+        background-color: rgba($color-highlight, 0.1);
+      }
+      to {
+        background-color: rgba($color-highlight, 0.4);
+      }
+    }
+  }
+
+  .contributors_viewer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 4px;
+    background-color: $theme-normal;
+
+    .contributor {
+      height: 28px;
+      padding: 0 6px;
+      font-weight: bold;
+
+      &.label {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+      }
+    }
+
+    .empty {
+      display: flex;
+      flex: 1;
+    }
+
+    .delete {
+      height: $line-height;
+    }
+  }
+}

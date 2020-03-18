@@ -1,0 +1,39 @@
+@import "~common/stylesheet/index";
+
+.array_2d {
+  flex-shrink: 0;
+  display: table;
+  border-collapse: collapse;
+
+  .row {
+    display: table-row;
+    height: 28px;
+
+    .col {
+      display: table-cell;
+      text-align: center;
+      min-width: 28px;
+      background-color: $theme-normal;
+      border: 1px solid $theme-light;
+      padding: 0 4px;
+
+      .value {
+        font-size: 12px;
+      }
+
+      &.selected {
+        background-color: $color-selected;
+      }
+
+      &.patched {
+        background-color: $color-patched;
+      }
+
+      &.index {
+        background: none;
+        border: none;
+        color: $theme-light;
+      }
+    }
+  }
+}
