@@ -7,7 +7,7 @@
 
 Learning an algorithm gets much easier with visualizing it. Don't get what we mean? Check it out:
 
-[**algorithm-visualizer.org**![Screenshot](https://raw.githubusercontent.com/algorithm-visualizer/algorithm-visualizer/master/branding/screenshot.png)](https://algorithm-visualizer.org/)
+[**niubility-algorithm.itstack.org**![Screenshot](https://raw.githubusercontent.com/algorithm-visualizer/algorithm-visualizer/master/branding/screenshot.png)](http://niubility-algorithm.itstack.org/)
 
 ## Contributing
 
